@@ -12,6 +12,12 @@ function M.setup()
     filters = {
       dotfiles = false,
     },
+
+    actions = {
+      open_file = {
+        quit_on_open = true,
+      },
+    },
   })
 
   vim.keymap.set("n", "<leader>e", ":NvimTreeOpen<CR>", { silent = true })
