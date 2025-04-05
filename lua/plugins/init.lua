@@ -6,4 +6,5 @@ return {
   require("plugins.tree"),
   require("plugins.autopairs"),
   require("plugins.lsp"),
+  require("plugins.cmp"),
 }
