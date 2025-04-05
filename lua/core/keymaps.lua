@@ -3,7 +3,12 @@ vim.g.maplocalleader = " "
 
 local keymap = vim.keymap.set
 
+-- Exit insert mode
 keymap("i", ";;", "<ESC>", { desc = "Exit insertion mode with ;;" })
-keymap("v", "S-j", ":m .-2<CR>==", { desc = "Move selected text down in visual mode" })
-keymap("v", "S-k", ":m .+1<CR>==", { desc = "Move selected text up in visual mode" })
+
+-- Move selected lines
+keymap("v", "<A-k>", ":m '>-2<CR>gv=gv", { desc = "Move selected text down in visual mode" })
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selected text up in visual mode" })
+
+-- File explorer
 keymap("n", "<leader>ep", vim.cmd.Ex, { desc = "Explore files" })
