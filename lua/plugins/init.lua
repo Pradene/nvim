@@ -4,4 +4,5 @@ return {
   require("plugins.gruvbox-material"),
   require("plugins.treesitter"),
   require("plugins.tree"),
+  require("plugins.autopairs"),
 }

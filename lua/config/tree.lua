@@ -14,7 +14,7 @@ function M.setup()
     },
   })
 
-  vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true })
+  vim.keymap.set("n", "<leader>e", ":NvimTreeOpen<CR>", { silent = true })
 
 end
 
