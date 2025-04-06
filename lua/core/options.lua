@@ -4,7 +4,7 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.number = true
 
--- Tabs / Indentation 
+-- Tabs / Indentation
 opt.tabstop = 2 -- 2 spaces for tab
 opt.shiftwidth = 2 -- 2 spaces for indentation
 opt.expandtab = true -- Tab -> Space
@@ -35,4 +35,3 @@ opt.undofile = true
 opt.list = true
 
 opt.scrolloff = 8
-
