@@ -15,6 +15,7 @@ opt.smartindent = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.hlsearch = true
+opt.incsearch = true
 
 opt.cursorline = true -- Highlight current line
 

@@ -7,4 +7,5 @@ return {
   require("plugins.autopairs"),
   require("plugins.lsp"),
   require("plugins.cmp"),
+  require("plugins.surround"),
 }
