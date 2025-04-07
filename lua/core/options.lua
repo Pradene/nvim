@@ -1,35 +1,41 @@
-local opt = vim.opt
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- Line number
-opt.relativenumber = true
-opt.number = true
+vim.opt.relativenumber = true
+vim.opt.number = true
 
 -- Tabs / Indentation
-opt.tabstop = 2 -- 2 spaces for tab
-opt.shiftwidth = 2 -- 2 spaces for indentation
-opt.expandtab = true -- Tab -> Space
-opt.autoindent = true -- keep same indentation on next line
-opt.smartindent = true
+vim.opt.tabstop = 2 -- 2 spaces for tab
+vim.opt.shiftwidth = 2 -- 2 spaces for indentation
+vim.opt.expandtab = true -- Tab -> Space
+vim.opt.autoindent = true -- keep same indentation on next line
+vim.opt.smartindent = true
 
 -- Search
-opt.ignorecase = true
-opt.smartcase = true
-opt.hlsearch = true
-opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
 
-opt.cursorline = true -- Highlight current line
+vim.opt.cursorline = true -- Highlight current line
 
-opt.termguicolors = true
-opt.background = "dark"
-opt.signcolumn = "yes"
+vim.opt.termguicolors = true
+vim.opt.background = "dark"
+vim.opt.signcolumn = "yes"
 
-opt.splitright = true
-opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
-opt.swapfile = false
+vim.opt.swapfile = false
 
-opt.undofile = true
+vim.opt.undofile = true
 
-opt.list = true
+vim.opt.list = true
 
-opt.scrolloff = 8
+vim.opt.scrolloff = 8
+
+vim.opt.clipboard = "unnamedplus"

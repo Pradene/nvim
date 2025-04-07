@@ -1,6 +1,5 @@
 -- Exit
-vim.keymap.set("i", ";;", "<ESC>", { desc = "Exit insertion mode with ;;" })
-vim.keymap.set("v", ";;", "<ESC>", { desc = "Exit visual mode with ;;" })
+vim.keymap.set({ "i", "v" }, ";;", "<ESC>", { desc = "Exit mode with ;;" })
 
 -- Move selected lines
 vim.keymap.set("v", "<A-k>", ":m '>-2<CR>gv=gv", { desc = "Move selected text down in visual mode" })
