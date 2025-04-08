@@ -10,7 +10,7 @@ return {
       prompt_save_on_select_new_entry = true,
 
       columns = {
-        "icons",
+        "icon",
       },
 
       sort = {
