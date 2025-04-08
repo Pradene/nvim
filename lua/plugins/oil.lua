@@ -11,9 +11,6 @@ return {
 
       columns = {
         "icons",
-        "permissions",
-        "size",
-        "mtime",
       },
 
       sort = {
@@ -31,9 +28,7 @@ return {
         ["<CR>"] = "actions.select",
         ["<leader>v"] = { "actions.select", opts = { vertical = true } },
         ["<leader>h"] = { "actions.select", opts = { horizontal = true } },
-        ["<leader>t"] = { "actions.select", opts = { tab = true } },
-        ["<C-p>"] = "actions.preview",
-        ["<C-l>"] = "actions.refresh",
+        ["<leader>tn"] = { "actions.select", opts = { tab = true } },
         ["-"] = { "actions.parent", mode = "n" },
         ["_"] = { "actions.open_cwd", mode = "n" },
         ["`"] = { "actions.cd", mode = "n" },
