@@ -14,6 +14,7 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank inside system 
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save buffer" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Close buffer" })
 
+vim.keymap.set("n", "<leader>t", ":tabnew<CR>", { desc = "Open buffer inside a new tab" })
 vim.keymap.set("n", "<leader>h", ":split<CR>", { desc = "Split terminal horizontaly" })
 vim.keymap.set("n", "<leader>v", ":vsplit<CR>", { desc = "Split terminal verticaly" })
 

@@ -15,7 +15,7 @@ return {
         ignore_focus = { "neo-tree" },
         always_divide_middle = true,
         always_show_tabline = true,
-        globalstatus = true,
+        globalstatus = false,
         refresh = {
           statusline = 100,
           tabline = 100,
