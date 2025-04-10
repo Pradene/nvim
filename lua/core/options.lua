@@ -23,6 +23,9 @@ vim.opt.incsearch = true
 
 vim.opt.cursorline = true -- Highlight current line
 
+vim.opt.wrap = true
+vim.opt.linebreak = true
+
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
 vim.opt.signcolumn = "yes"
