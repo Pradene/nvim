@@ -11,6 +11,9 @@ vim.keymap.set({ "n", "x", "v" }, "gh", "_", { noremap = true })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent doesn't escape visual mode" })
 vim.keymap.set("v", "<", "<gv", { desc = "Indent doesn't escape visual mode" })
 
+vim.keymap.set("n", "n", "nzz", { desc = "Center cursor in middle of screen after search" })
+vim.keymap.set("n", "N", "Nzz", { desc = "Center cursor in middle of screen after search" })
+
 -- Remove highlight on search
 vim.keymap.set("n", "<leader>/", ":noh<CR>", { silent = true, desc = "Remove highlight search" })
 
