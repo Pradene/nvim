@@ -5,8 +5,8 @@ vim.keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode" })
 vim.keymap.set("v", "<A-k>", ":m '>-2<CR>gv=gv", { silent = true, desc = "Move selected text down in visual mode" })
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { silent = true, desc = "Move selected text up in visual mode" })
 
-vim.keymap.set({ "n", "x", "v" }, "gl", "$", { noremap = true })
-vim.keymap.set({ "n", "x", "v" }, "gh", "_", { noremap = true })
+vim.keymap.set({ "n", "o", "x", "v" }, "L", "$", { noremap = true })
+vim.keymap.set({ "n", "o", "x", "v" }, "H", "0", { noremap = true })
 
 vim.keymap.set("v", ">", ">gv", { desc = "Indent doesn't escape visual mode" })
 vim.keymap.set("v", "<", "<gv", { desc = "Indent doesn't escape visual mode" })
@@ -36,3 +36,9 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", { silent = true, desc = "Move to buffer l
 vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true, desc = "Move to buffer right" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { silent = true, desc = "Move to buffer down" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { silent = true, desc = "Move to buffer up" })
+
+-- Disable arrows
+vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Up>", "<nop>", {})
+vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Down>", "<nop>", {})
+vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Left>", "<nop>", {})
+vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Right>", "<nop>", {})

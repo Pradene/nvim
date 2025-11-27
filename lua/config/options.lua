@@ -9,9 +9,9 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 
 -- Tabs / Indentation
-vim.opt.tabstop = 2 -- 2 spaces for tab
-vim.opt.shiftwidth = 2 -- 2 spaces for indentation
-vim.opt.expandtab = true -- Tab -> Space
+vim.opt.tabstop = 2       -- 2 spaces for tab
+vim.opt.shiftwidth = 2    -- 2 spaces for indentation
+vim.opt.expandtab = true  -- Tab -> Space
 vim.opt.autoindent = true -- keep same indentation on next line
 vim.opt.smartindent = true
 
@@ -42,16 +42,16 @@ vim.opt.list = true
 vim.opt.scrolloff = 8
 
 if vim.fn.has("wsl") == 1 then
-	vim.g.clipboard = {
-		name = "clip.exe (Copy Only)",
-		copy = {
-			["+"] = "clip.exe",
-			["*"] = "clip.exe",
-		},
-		paste = {
-			["+"] = "clip.exe",
-			["*"] = "clip.exe",
-		},
-		cache_enabled = true,
-	}
+  vim.g.clipboard = {
+    name = "clip.exe (Copy Only)",
+    copy = {
+      ["+"] = "clip.exe",
+      ["*"] = "clip.exe",
+    },
+    paste = {
+      ["+"] = "clip.exe",
+      ["*"] = "clip.exe",
+    },
+    cache_enabled = true,
+  }
 end
