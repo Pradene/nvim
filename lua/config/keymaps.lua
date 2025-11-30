@@ -48,10 +48,10 @@ vim.keymap.set({ "t", "n" }, "<C-j>", "<C-w>j", { silent = true, noremap = true 
 vim.keymap.set({ "t", "n" }, "<C-k>", "<C-w>k", { silent = true, noremap = true })
 
 -- Disable arrows
-vim.keymap.set({ "t", "n", "i", "v", "x", "o" }, "<Up>", "<nop>", { silent = true, noremap = true })
-vim.keymap.set({ "t", "n", "i", "v", "x", "o" }, "<Down>", "<nop>", { silent = true, noremap = true })
-vim.keymap.set({ "t", "n", "i", "v", "x", "o" }, "<Left>", "<nop>", { silent = true, noremap = true })
-vim.keymap.set({ "t", "n", "i", "v", "x", "o" }, "<Right>", "<nop>", { silent = true, noremap = true })
+vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Up>", "<nop>", { silent = true, noremap = true })
+vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Down>", "<nop>", { silent = true, noremap = true })
+vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Left>", "<nop>", { silent = true, noremap = true })
+vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Right>", "<nop>", { silent = true, noremap = true })
 
 -- Open terminal in horizontal split and enter insert mode
 vim.keymap.set("n", "<leader>t", ":split | term<CR>i", { silent = true, noremap = true })
