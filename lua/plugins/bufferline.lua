@@ -10,9 +10,6 @@ return {
         mode = "buffers",
         numbers = "none",
 
-        close_command = "bdelete! %d",
-        right_mouse_command = "bdelete! %d",
-
         diagnostics = "nvim_lsp",
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
           return "(" .. count .. ")"
@@ -41,7 +38,7 @@ return {
       },
     })
 
-    vim.keymap.set("n", "<S-l>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
-    vim.keymap.set("n", "<S-h>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
+    vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
+    vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
   end,
 }

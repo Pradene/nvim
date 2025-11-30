@@ -4,6 +4,7 @@ vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true, noremap = true })
 
 -- Exit
 vim.keymap.set("i", "jk", "<ESC>", { silent = true, noremap = true })
+vim.keymap.set("t", "jk", [[<C-\><C-n>]], { silent = true, noremap = true })
 
 -- Move selected lines
 vim.keymap.set("v", "<A-k>", ":m '>-2<CR>gv=gv", { silent = true, noremap = true })
@@ -41,13 +42,16 @@ vim.keymap.set("n", "<leader>h", ":split<CR>", { silent = true, noremap = true }
 vim.keymap.set("n", "<leader>v", ":vsplit<CR>", { silent = true, noremap = true })
 
 -- Move focused split
-vim.keymap.set("n", "<C-h>", "<C-w>h", { silent = true, noremap = true })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true, noremap = true })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { silent = true, noremap = true })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { silent = true, noremap = true })
+vim.keymap.set({ "t", "n" }, "<C-h>", "<C-w>h", { silent = true, noremap = true })
+vim.keymap.set({ "t", "n" }, "<C-l>", "<C-w>l", { silent = true, noremap = true })
+vim.keymap.set({ "t", "n" }, "<C-j>", "<C-w>j", { silent = true, noremap = true })
+vim.keymap.set({ "t", "n" }, "<C-k>", "<C-w>k", { silent = true, noremap = true })
 
 -- Disable arrows
-vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Up>", "<nop>", { silent = true, noremap = true })
-vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Down>", "<nop>", { silent = true, noremap = true })
-vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Left>", "<nop>", { silent = true, noremap = true })
-vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Right>", "<nop>", { silent = true, noremap = true })
+vim.keymap.set({ "t", "n", "i", "v", "x", "o" }, "<Up>", "<nop>", { silent = true, noremap = true })
+vim.keymap.set({ "t", "n", "i", "v", "x", "o" }, "<Down>", "<nop>", { silent = true, noremap = true })
+vim.keymap.set({ "t", "n", "i", "v", "x", "o" }, "<Left>", "<nop>", { silent = true, noremap = true })
+vim.keymap.set({ "t", "n", "i", "v", "x", "o" }, "<Right>", "<nop>", { silent = true, noremap = true })
+
+-- Open terminal in horizontal split and enter insert mode
+vim.keymap.set("n", "<leader>t", ":split | term<CR>i", { silent = true, noremap = true })
