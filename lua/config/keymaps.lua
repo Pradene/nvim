@@ -1,44 +1,53 @@
+-- Save/Close
+vim.keymap.set("n", "<leader>w", ":w<CR>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true, noremap = true })
+
 -- Exit
-vim.keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode" })
+vim.keymap.set("i", "jk", "<ESC>", { silent = true, noremap = true })
 
 -- Move selected lines
-vim.keymap.set("v", "<A-k>", ":m '>-2<CR>gv=gv", { silent = true, desc = "Move selected text down in visual mode" })
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { silent = true, desc = "Move selected text up in visual mode" })
+vim.keymap.set("v", "<A-k>", ":m '>-2<CR>gv=gv", { silent = true, noremap = true })
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { silent = true, noremap = true })
 
-vim.keymap.set({ "n", "o", "x", "v" }, "L", "$", { noremap = true })
-vim.keymap.set({ "n", "o", "x", "v" }, "H", "0", { noremap = true })
+-- Go to start/end of line
+vim.keymap.set({ "n", "o", "x", "v" }, "L", "$", { silent = true, noremap = true })
+vim.keymap.set({ "n", "o", "x", "v" }, "H", "0", { silent = true, noremap = true })
 
-vim.keymap.set("v", ">", ">gv", { desc = "Indent doesn't escape visual mode" })
-vim.keymap.set("v", "<", "<gv", { desc = "Indent doesn't escape visual mode" })
+-- Indent selection
+vim.keymap.set("v", ">", ">gv", { silent = true, noremap = true })
+vim.keymap.set("v", "<", "<gv", { silent = true, noremap = true })
 
-vim.keymap.set("n", "n", "nzz", { desc = "Center cursor in middle of screen after search" })
-vim.keymap.set("n", "N", "Nzz", { desc = "Center cursor in middle of screen after search" })
+-- Center cursor in middle of screen after search
+vim.keymap.set("n", "n", "nzz", { silent = true, noremap = true })
+vim.keymap.set("n", "N", "Nzz", { silent = true, noremap = true })
 
 -- Remove highlight on search
-vim.keymap.set("n", "<leader>/", ":noh<CR>", { silent = true, desc = "Remove highlight search" })
+vim.keymap.set("n", "<leader>/", ":noh<CR>", { silent = true, noremap = true })
 
-vim.keymap.set("x", "<leader>p", [["_dP]], { silent = true, desc = "Delete and paste selection" })
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { silent = true, desc = "Yank inside system clipboard" })
+-- Delete and paste selection
+vim.keymap.set("x", "<leader>p", [["_dP]], { silent = true, noremap = true })
 
-vim.keymap.set("n", "U", "<C-r>", { noremap = true, desc = "Redo with U" })
+-- Yank inside system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { silent = true, noremap = true })
 
-vim.keymap.set("n", "<leader>w", ":w<CR>", { silent = true, desc = "Save buffer" })
-vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true, desc = "Close buffer" })
+-- Redo with U
+vim.keymap.set("n", "U", "<C-r>", { silent = true, noremap = true })
 
-vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { silent = true, desc = "Open buffer inside a new tab" })
-vim.keymap.set("n", "<leader>tc", ":tabclose<CR>", { silent = true, desc = "Close buffer inside a new tab" })
-vim.keymap.set("n", "<leader>tt", ":tabnext<CR>", { silent = true, desc = "Move buffer inside a new tab" })
-vim.keymap.set("n", "<leader>tp", ":tabprevious<CR>", { silent = true, desc = "Move buffer inside a new tab" })
-vim.keymap.set("n", "<leader>h", ":split<CR>", { silent = true, desc = "Split terminal horizontaly" })
-vim.keymap.set("n", "<leader>v", ":vsplit<CR>", { silent = true, desc = "Split terminal verticaly" })
+-- Close buffer
+vim.keymap.set("n", "<leader>bc", ":bdelete<CR>", { silent = true, noremap = true })
 
-vim.keymap.set("n", "<C-h>", "<C-w>h", { silent = true, desc = "Move to buffer left" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true, desc = "Move to buffer right" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { silent = true, desc = "Move to buffer down" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { silent = true, desc = "Move to buffer up" })
+-- Split window
+vim.keymap.set("n", "<leader>h", ":split<CR>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>v", ":vsplit<CR>", { silent = true, noremap = true })
+
+-- Move focused split
+vim.keymap.set("n", "<C-h>", "<C-w>h", { silent = true, noremap = true })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true, noremap = true })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { silent = true, noremap = true })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { silent = true, noremap = true })
 
 -- Disable arrows
-vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Up>", "<nop>", {})
-vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Down>", "<nop>", {})
-vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Left>", "<nop>", {})
-vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Right>", "<nop>", {})
+vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Up>", "<nop>", { silent = true, noremap = true })
+vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Down>", "<nop>", { silent = true, noremap = true })
+vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Left>", "<nop>", { silent = true, noremap = true })
+vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Right>", "<nop>", { silent = true, noremap = true })
