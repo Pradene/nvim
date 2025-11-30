@@ -4,7 +4,6 @@ vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true, noremap = true })
 
 -- Exit
 vim.keymap.set("i", "jk", "<ESC>", { silent = true, noremap = true })
-vim.keymap.set("t", "jk", [[<C-\><C-n>]], { silent = true, noremap = true })
 
 -- Move selected lines
 vim.keymap.set("v", "<A-k>", ":m '>-2<CR>gv=gv", { silent = true, noremap = true })
@@ -54,4 +53,7 @@ vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Left>", "<nop>", { silent = true, 
 vim.keymap.set({ "n", "i", "v", "x", "o" }, "<Right>", "<nop>", { silent = true, noremap = true })
 
 -- Open terminal in horizontal split and enter insert mode
-vim.keymap.set("n", "<leader>t", ":split | term<CR>i", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>t", function()
+  vim.cmd("split | term")
+  vim.cmd("startinsert")
+end, { silent = true, noremap = true })
