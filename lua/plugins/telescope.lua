@@ -14,6 +14,7 @@ return {
           n = {
             ["<C-n>"] = actions.move_selection_next,
             ["<C-p>"] = actions.move_selection_previous,
+            ["<leader>q"] = actions.close
           },
         },
       },
