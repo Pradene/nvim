@@ -19,6 +19,7 @@ vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.list = true
 vim.opt.scrolloff = 8
+vim.opt.winblend = 0
 
 if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
