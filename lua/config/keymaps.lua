@@ -4,6 +4,8 @@ vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = true, noremap = true })
 
 -- Exit
 vim.keymap.set("i", "jk", "<ESC>", { silent = true, noremap = true })
+vim.keymap.set("t", "jk", "<C-\\><C-n>", { silent = true, noremap = true })
+vim.keymap.set("t", "<Esc>", "<C-d>", { silent = true, noremap = true })
 
 -- Move selected lines
 vim.keymap.set("v", "<A-k>", ":m '>-2<CR>gv=gv", { silent = true, noremap = true })
@@ -21,9 +23,6 @@ vim.keymap.set("v", "<", "<gv", { silent = true, noremap = true })
 vim.keymap.set("n", "n", "nzz", { silent = true, noremap = true })
 vim.keymap.set("n", "N", "Nzz", { silent = true, noremap = true })
 
--- Remove highlight on search
-vim.keymap.set("n", "<leader>/", ":noh<CR>", { silent = true, noremap = true })
-
 -- Delete and paste selection
 vim.keymap.set("x", "<leader>p", [["_dP]], { silent = true, noremap = true })
 
@@ -32,9 +31,6 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { silent = true, noremap = tr
 
 -- Redo with U
 vim.keymap.set("n", "U", "<C-r>", { silent = true, noremap = true })
-
--- Close buffer
-vim.keymap.set("n", "<leader>bc", ":bdelete<CR>", { silent = true, noremap = true })
 
 -- Split window
 vim.keymap.set("n", "<leader>h", ":split<CR>", { silent = true, noremap = true })
@@ -57,3 +53,17 @@ vim.keymap.set("n", "<leader>t", function()
   vim.cmd("split | term")
   vim.cmd("startinsert")
 end, { silent = true, noremap = true })
+
+vim.keymap.set("n", "-", function()
+  require("oil").open()
+end, { noremap = true, silent = true })
+
+vim.keymap.set("n", "<CR>", function()
+  ---@diagnostic disable-next-line: undefined-field
+  if vim.v.hlsearch == 1 then
+    vim.cmd.nohl()
+    return ""
+  else
+    return vim.keycode("<CR>")
+  end
+end, { expr = true })
